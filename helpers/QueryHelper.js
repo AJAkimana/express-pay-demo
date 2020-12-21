@@ -23,7 +23,11 @@ export class QueryHelper {
 	 * @param {*} value
 	 */
 	findAll(key, value) {
-		return this.model.filter((item) => item[key] === value);
+		let items = this.model;
+		if (key && value) {
+			items = this.model.filter((item) => item[key] === value);
+		}
+		return items;
 	}
 	/**
 	 *

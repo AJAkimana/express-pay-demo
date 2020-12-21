@@ -19,6 +19,13 @@ export const serverResponse = (res, statusCode, message, data) => {
 		.status(statusCode)
 		.json({ status: statusCode, [messageType]: message, data });
 };
+export const renderPage = (res, page, data) => {
+	const pageData = {
+		title: 'APTest',
+		...data
+	};
+	return res.render(page, pageData);
+};
 /**
  *
  * @param {Object} userInfo User info to generate the token from
