@@ -1,4 +1,4 @@
-import jwt from 'jsonwebtoken';
+import jwt, { verify } from 'jsonwebtoken';
 import { mockUsers } from './constants';
 import { QueryHelper } from './QueryHelper';
 

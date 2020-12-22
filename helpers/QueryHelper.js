@@ -41,4 +41,8 @@ export class QueryHelper {
 		}
 		return item;
 	}
+	clearAll() {
+		this.model = [];
+		return [];
+	}
 }
